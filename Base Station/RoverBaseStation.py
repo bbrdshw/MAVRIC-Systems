@@ -195,16 +195,16 @@ try:
 
         #convert from joystick arcade drive to rover tank drive
         #   add condition to make backing up behave the way you'd expect (like a car)
-        drive_l = drive_y_axis + (drive_x_axis/2)
-        drive_r = drive_y_axis - (drive_x_axis/2)
+        drive_l = drive_y_axis + int(drive_x_axis/2)
+        drive_r = drive_y_axis - int(drive_x_axis/2)
 
         """if drive_y_axis >= 0:
-            drive_l = drive_y_axis + (drive_x_axis/2)
-            drive_r = drive_y_axis - (drive_x_axis/2)
+            drive_l = drive_y_axis + int(drive_x_axis/2)
+            drive_r = drive_y_axis - int(drive_x_axis/2)
 
         else:
-            drive_l = drive_y_axis - (drive_x_axis/2)
-            drive_r = drive_y_axis + (drive_x_axis/2)"""
+            drive_l = drive_y_axis - int(drive_x_axis/2)
+            drive_r = drive_y_axis + int(drive_x_axis/2)"""
 
         #send commands to rover if safe to do so
         if not emergency_stop:
