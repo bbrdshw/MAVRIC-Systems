@@ -231,11 +231,11 @@ try:
         pygame.draw.line(screen, (100,0,100), (claw_actuation_draw_pos[0], claw_actuation_draw_pos[1] + 50), (claw_actuation_draw_pos[0], claw_actuation_draw_pos[1] - 50), 3)
 
         pygame.draw.circle(screen, (0,255,255), (drive_stick_draw_pos[0] + drive_x_axis, drive_stick_draw_pos[1] - drive_y_axis), 5)
-        pygame.draw.circle(screen, (0,255,0), (shoulder_stick_draw_pos[0] + shoulder_r_axis/2, shoulder_stick_draw_pos[1] - shoulder_p_axis/2), 5)
-        pygame.draw.circle(screen, (255,0,0), (wrist_stick_draw_pos[0] + wrist_r_axis/2, wrist_stick_draw_pos[1] - wrist_p_axis/2), 5)
+        pygame.draw.circle(screen, (0,255,0), (shoulder_stick_draw_pos[0] + int(shoulder_r_axis/2), shoulder_stick_draw_pos[1] - int(shoulder_p_axis/2)), 5)
+        pygame.draw.circle(screen, (255,0,0), (wrist_stick_draw_pos[0] + int(wrist_r_axis/2), wrist_stick_draw_pos[1] - int(wrist_p_axis/2)), 5)
 
-        pygame.draw.circle(screen, (255,255,0), (elbow_pitch_draw_pos[0], elbow_pitch_draw_pos[1] - elbow_p_val/2), 5)
-        pygame.draw.circle(screen, (255,0,255), (claw_actuation_draw_pos[0], claw_actuation_draw_pos[1] - claw_a_val/2), 5)
+        pygame.draw.circle(screen, (255,255,0), (elbow_pitch_draw_pos[0], elbow_pitch_draw_pos[1] - int(elbow_p_val/2)), 5)
+        pygame.draw.circle(screen, (255,0,255), (claw_actuation_draw_pos[0], claw_actuation_draw_pos[1] - int(claw_a_val/2)), 5)
 
         pygame.display.flip()
         
